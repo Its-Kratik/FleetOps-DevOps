@@ -5,7 +5,7 @@ app = FastAPI(title="FleetOps API", description="FleetOps DevOps API", version="
 
 @app.get("/")
 def home():
-    return {"message": "Welcome to FleetOps - CI/CD Success 🚀"}
+    return {"message": "Welcome to FleetOps - CI/CD Success 🚀 And Hinal is pootty"}
 
 @app.get("/health")
 def health_check():
