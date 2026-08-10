@@ -1,0 +1,6 @@
+services:
+  fleetops:
+    image: kratikjain12/fleetops:latest
+    container_name: fleetops
+    ports:
+      - "8001:8000"
