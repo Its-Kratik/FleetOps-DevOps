@@ -38,13 +38,10 @@ jobs:
           key: ${{ secrets.EC2_SSH_KEY }}
 
           script: |
-            sudo docker pull ${{ secrets.DOCKER_IMAGE }}
+            cd ~/FleetOps-DevOps
 
-            sudo docker stop fleetops || true
+            git pull origin main
 
-            sudo docker rm fleetops || true
+            sudo docker compose pull
 
-            sudo docker run -d \
-              --name fleetops \
-              -p 8000:8000 \
-              ${{ secrets.DOCKER_IMAGE }}
+            sudo docker compose up -d
