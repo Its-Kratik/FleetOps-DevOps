@@ -3,7 +3,7 @@ services:
     image: kratikjain12/fleetops:latest
     container_name: fleetops
     ports:
-      - "8000:8000"
+      - "127.0.0.1:8000:8000"
     restart: unless-stopped
 
     logging:
